@@ -1,0 +1,23 @@
+
+Link : https://github.com/shashankarya9999/CodSoft-Cpp-Internship/blob/main/04_simple_calculator.cpp
+
+
+
+--------------  My analysis of mentioned project  ---------------
+
+
+This is a very basic calculator program and can perform addition, subtraction, multiplication, division and modulus operations.
+
+Line [7-14] : It initializes two variables of type double to store the two numbers.
+
+Line [15-16] : It takes input for the type of operation to be performed.
+
+Line [18-58] : Switch case is used to perform the appropriate operation based on the type of operation.
+
+Line [52] : Here I found an error in the code. We are using % operator to get the remainder but % operator works only with double data type. It will throw an error if used like this. What can instead be done is to type cast the data type to int when % operator is selected and the resulting code will look like this -
+
+	cout << "Result: " << ((int)num1 % (int)num2) << endl;
+
+After this the code should work fine.
+
+Line [57] : Error handling in case any invalid operator is typed by the user.
